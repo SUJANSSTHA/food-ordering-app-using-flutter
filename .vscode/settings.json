@@ -1,3 +1,4 @@
 {
-  "cmake.sourceDirectory": "S:/FlutterApp/flutter_catalog1/calculator/FoodDelivery/foodordering/linux"
+  "cmake.sourceDirectory": "S:/FlutterApp/flutter_catalog1/calculator/FoodDelivery/foodordering/linux",
+  "java.configuration.updateBuildConfiguration": "interactive"
 }

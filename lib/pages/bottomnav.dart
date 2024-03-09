@@ -96,7 +96,7 @@ class _BottomNavState extends State<BottomNav> {
             ),
             Icon(
               Icons.shopping_bag_outlined,
-              color: Colors.white,
+             color: Colors.white,
             ),
             Icon(
               Icons.wallet_outlined,
@@ -104,7 +104,7 @@ class _BottomNavState extends State<BottomNav> {
             ),
             Icon(
               Icons.person_outline,
-              color: Colors.white,
+            color: Colors.white,
             )
           ]),
       body: pages[currentTabIndex],

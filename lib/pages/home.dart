@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:foodordering/pages/details.dart';
 
 import '../widget/widget_support.dart';
 
@@ -67,38 +68,46 @@ class _HomeState extends State<Home> {
               scrollDirection: Axis.horizontal,
               child: Row(
                 children: [
-                  Container(
-                    margin: EdgeInsets.all(4),
-                    child: Material(
-                      elevation: 5.0,
-                      borderRadius: BorderRadius.circular(20),
-                      child: Container(
-                        padding: EdgeInsets.all(18),
-                        child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Image.asset(
-                                "images/salad2.png",
-                                height: 150,
-                                width: 150,
-                                fit: BoxFit.cover,
-                              ),
-                              Text(
-                                "Mix Veg salad",
-                                style: AppWidget.semiBoldTextFeildStyle(),
-                              ),
-                              SizedBox(height: 5.0),
-                              Text(
-                                "Spicy with Onion",
-                                style: AppWidget.LightTextFeildStyle(),
-                              ),
-                              SizedBox(height: 5.0),
-                              Text(
-                                // "\$25",
-                                "Rs. 25",
-                                style: AppWidget.semiBoldTextFeildStyle(),
-                              )
-                            ]),
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          // moving ontap to details page
+                          MaterialPageRoute(builder: (context) => Details()));
+                    },
+                    child: Container(
+                      margin: EdgeInsets.all(4),
+                      child: Material(
+                        elevation: 5.0,
+                        borderRadius: BorderRadius.circular(20),
+                        child: Container(
+                          padding: EdgeInsets.all(18),
+                          child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Image.asset(
+                                  "images/salad2.png",
+                                  height: 150,
+                                  width: 150,
+                                  fit: BoxFit.cover,
+                                ),
+                                Text(
+                                  "Mix Veg salad",
+                                  style: AppWidget.semiBoldTextFeildStyle(),
+                                ),
+                                SizedBox(height: 5.0),
+                                Text(
+                                  "Spicy with Onion",
+                                  style: AppWidget.LightTextFeildStyle(),
+                                ),
+                                SizedBox(height: 5.0),
+                                Text(
+                                  // "\$25",
+                                  "Rs. 25",
+                                  style: AppWidget.semiBoldTextFeildStyle(),
+                                )
+                              ]),
+                        ),
                       ),
                     ),
                   ),
