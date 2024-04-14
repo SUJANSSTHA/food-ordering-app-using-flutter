@@ -1,15 +1,18 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_stripe/flutter_stripe.dart';
 import 'package:foodordering/firebase_options.dart';
-import 'package:foodordering/pages/bottomnav.dart';
-import 'package:foodordering/pages/home.dart';
-import 'package:foodordering/pages/login.dart';
+// import 'package:foodordering/pages/bottomnav.dart';
+// import 'package:foodordering/pages/home.dart';
+// import 'package:foodordering/pages/login.dart';
 import 'package:foodordering/pages/onboard.dart';
-import 'package:foodordering/pages/signup.dart';
+import 'package:foodordering/widget/app_constant.dart';
+// import 'package:foodordering/pages/signup.dart';
 
 void main() async {
   // ! enable fire base
   WidgetsFlutterBinding.ensureInitialized();
+  Stripe.publishableKey = publishableKey;
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
